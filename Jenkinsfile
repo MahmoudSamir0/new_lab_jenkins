@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'Agent jenkins-ubuntu-slave' }
+    agent { label 'jenkins-ubuntu-slave' }
     parameters {
         choice(name: 'ENV', choices: ['dev', 'test', 'prod',"release"])
     } 
