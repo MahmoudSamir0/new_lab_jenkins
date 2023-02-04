@@ -4,7 +4,7 @@ pipeline {
         stage('build') {
             steps {
                 script {
-                   if (env.BRANCH_NAME == "build") {
+                   if (env.BRANCH_NAME == "release") {
                        withCredentials([usernamePassword(credentialsId: 'docker', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
                            sh """
                                 docker login -u $USERNAME -p $PASSWORD
